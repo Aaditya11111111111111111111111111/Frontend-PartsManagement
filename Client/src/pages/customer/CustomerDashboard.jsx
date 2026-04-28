@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { customersApi } from '../../services/api';
 
 const CustomerDashboard = () => {
@@ -86,30 +85,30 @@ const CustomerDashboard = () => {
               ))
             )}
           </div>
-          <Link to="/customer/history" className="view-all-btn">
+          <button className="view-all-btn">
             View All Orders
-          </Link>
+          </button>
         </div>
 
         <div className="quick-actions">
           <h2>Quick Actions</h2>
           <div className="actions-grid">
-            <Link to="/customer/ai-predictor" className="action-card">
+            <div className="action-card">
               <h3>AI Parts Predictor</h3>
               <p>Find the right parts for your vehicle</p>
-            </Link>
-            <Link to="/customer/history" className="action-card">
+            </div>
+            <div className="action-card">
               <h3>Order History</h3>
               <p>View your past orders</p>
-            </Link>
-            <Link to="/customer/appointments" className="action-card">
+            </div>
+            <div className="action-card">
               <h3>Book Appointment</h3>
               <p>Schedule a service appointment</p>
-            </Link>
-            <Link to="/customer/reviews" className="action-card">
+            </div>
+            <div className="action-card">
               <h3>Write Review</h3>
               <p>Share your experience</p>
-            </Link>
+            </div>
           </div>
         </div>
       </div>

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { customersApi } from '../../services/api';
 
 const HistoryPage = () => {
@@ -48,9 +47,9 @@ const HistoryPage = () => {
     <div className="history-page">
       <div className="history-header">
         <h1>Order History</h1>
-        <Link to="/customer/dashboard" className="back-btn">
+        <button className="back-btn">
           ← Back to Dashboard
-        </Link>
+        </button>
       </div>
 
       <div className="history-filters">
