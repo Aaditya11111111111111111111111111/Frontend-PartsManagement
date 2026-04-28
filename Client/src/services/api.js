@@ -198,10 +198,141 @@ export const vendorsApi = {
   }
 };
 
+// Appointments API
+export const appointmentsApi = {
+  getAll: async () => {
+    // Mock appointments - replace with actual API call
+    return [
+      {
+        id: 1,
+        date: '2024-04-25',
+        time: '10:00 AM',
+        customerName: 'John Doe',
+        vehicleInfo: 'Toyota Camry 2020',
+        service: 'Oil Change',
+        status: 'Scheduled',
+        notes: 'Customer requested synthetic oil'
+      },
+      {
+        id: 2,
+        date: '2024-04-26',
+        time: '2:00 PM',
+        customerName: 'Jane Smith',
+        vehicleInfo: 'Honda Civic 2021',
+        service: 'Brake Inspection',
+        status: 'Confirmed',
+        notes: 'Check brake pads and rotors'
+      }
+    ];
+  },
+
+  create: async (appointmentData) => {
+    // Mock create - replace with actual API call
+    return { id: Date.now(), ...appointmentData };
+  },
+
+  update: async (id, appointmentData) => {
+    // Mock update - replace with actual API call
+    return { id, ...appointmentData };
+  },
+
+  delete: async (id) => {
+    // Mock delete - replace with actual API call
+    return { success: true };
+  }
+};
+
+// Part Requests API
+export const partRequestsApi = {
+  getAll: async () => {
+    // Mock part requests - replace with actual API call
+    return [
+      {
+        id: 1,
+        customerName: 'John Doe',
+        partName: 'Brake Pads',
+        vehicleInfo: 'Toyota Camry 2020',
+        requestDate: '2024-04-20',
+        status: 'Pending',
+        quantity: 2,
+        notes: 'Urgent - customer needs for safety inspection'
+      },
+      {
+        id: 2,
+        customerName: 'Jane Smith',
+        partName: 'Oil Filter',
+        vehicleInfo: 'Honda Civic 2021',
+        requestDate: '2024-04-19',
+        status: 'Approved',
+        quantity: 1,
+        notes: 'Regular maintenance'
+      }
+    ];
+  },
+
+  create: async (requestData) => {
+    // Mock create - replace with actual API call
+    return { id: Date.now(), ...requestData };
+  },
+
+  update: async (id, requestData) => {
+    // Mock update - replace with actual API call
+    return { id, ...requestData };
+  },
+
+  delete: async (id) => {
+    // Mock delete - replace with actual API call
+    return { success: true };
+  }
+};
+
+// Reviews API
+export const reviewsApi = {
+  getAll: async () => {
+    // Mock reviews - replace with actual API call
+    return [
+      {
+        id: 1,
+        customerName: 'John Doe',
+        rating: 5,
+        comment: 'Excellent service! Very professional and quick.',
+        date: '2024-04-15',
+        serviceName: 'Oil Change'
+      },
+      {
+        id: 2,
+        customerName: 'Jane Smith',
+        rating: 4,
+        comment: 'Good service, but a bit expensive.',
+        date: '2024-04-10',
+        serviceName: 'Brake Inspection'
+      }
+    ];
+  },
+
+  create: async (reviewData) => {
+    // Mock create - replace with actual API call
+    return { id: Date.now(), ...reviewData };
+  },
+
+  update: async (id, reviewData) => {
+    // Mock update - replace with actual API call
+    return { id, ...reviewData };
+  },
+
+  delete: async (id) => {
+    // Mock delete - replace with actual API call
+    return { success: true };
+  }
+};
+
 export default {
   authApi,
   customersApi,
   aiApi,
   partsApi,
-  vendorsApi
+  vendorsApi,
+  appointmentsApi,
+  partRequestsApi,
+  reviewsApi
 };
