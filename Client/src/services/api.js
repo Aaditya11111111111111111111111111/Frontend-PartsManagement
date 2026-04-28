@@ -347,6 +347,74 @@ export const notificationsApi = {
   }
 };
 
+// Reports API
+export const reportsApi = {
+  getSalesReport: async (dateRange) => {
+    // Mock sales report - replace with actual API call
+    return {
+      totalSales: 15420.50,
+      totalOrders: 45,
+      averageOrderValue: 342.68,
+      topSellingParts: [
+        { name: 'Brake Pads', quantity: 23, revenue: 1035.00 },
+        { name: 'Oil Filter', quantity: 45, revenue: 1125.00 },
+        { name: 'Spark Plugs', quantity: 18, revenue: 630.00 }
+      ],
+      dailySales: [
+        { date: '2024-04-20', sales: 1250.00 },
+        { date: '2024-04-21', sales: 980.00 },
+        { date: '2024-04-22', sales: 1450.00 },
+        { date: '2024-04-23', sales: 1670.00 },
+        { date: '2024-04-24', sales: 890.00 }
+      ]
+    };
+  },
+
+  getInventoryReport: async () => {
+    // Mock inventory report - replace with actual API call
+    return {
+      totalParts: 156,
+      lowStockItems: 8,
+      outOfStockItems: 2,
+      totalValue: 45780.00,
+      categories: [
+        { name: 'Brakes', count: 23, value: 12500.00 },
+        { name: 'Filters', count: 45, value: 8900.00 },
+        { name: 'Engine Parts', count: 34, value: 15600.00 },
+        { name: 'Electrical', count: 28, value: 8780.00 }
+      ]
+    };
+  },
+
+  getCustomerReport: async () => {
+    // Mock customer report - replace with actual API call
+    return {
+      totalCustomers: 234,
+      newCustomersThisMonth: 18,
+      activeCustomers: 189,
+      topCustomers: [
+        { name: 'John Doe', orders: 12, totalSpent: 2340.00 },
+        { name: 'Jane Smith', orders: 8, totalSpent: 1890.00 },
+        { name: 'Bob Johnson', orders: 6, totalSpent: 1450.00 }
+      ],
+      customerRetention: 87.5
+    };
+  },
+
+  getStaffPerformanceReport: async () => {
+    // Mock staff performance report - replace with actual API call
+    return {
+      totalStaff: 8,
+      averagePerformance: 4.2,
+      topPerformers: [
+        { name: 'Alice Wilson', sales: 8900.00, customers: 45, rating: 4.8 },
+        { name: 'Bob Brown', sales: 7650.00, customers: 38, rating: 4.6 },
+        { name: 'Carol Davis', sales: 6780.00, customers: 32, rating: 4.4 }
+      ]
+    };
+  }
+};
+
 // Reviews API
 export const reviewsApi = {
   getAll: async () => {
@@ -396,5 +464,6 @@ export default {
   appointmentsApi,
   partRequestsApi,
   reviewsApi,
-  notificationsApi
+  notificationsApi,
+  reportsApi
 };
