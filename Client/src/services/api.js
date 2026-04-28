@@ -286,6 +286,67 @@ export const partRequestsApi = {
   }
 };
 
+// Notifications API
+export const notificationsApi = {
+  getAll: async () => {
+    // Mock notifications - replace with actual API call
+    return [
+      {
+        id: 1,
+        title: 'New Appointment Scheduled',
+        message: 'John Doe scheduled an appointment for tomorrow at 10 AM',
+        type: 'info',
+        date: '2024-04-24T10:30:00Z',
+        read: false
+      },
+      {
+        id: 2,
+        title: 'Low Stock Alert',
+        message: 'Brake Pads are running low (5 units remaining)',
+        type: 'warning',
+        date: '2024-04-24T09:15:00Z',
+        read: false
+      },
+      {
+        id: 3,
+        title: 'New Customer Registration',
+        message: 'Jane Smith has registered as a new customer',
+        type: 'success',
+        date: '2024-04-23T15:45:00Z',
+        read: true
+      },
+      {
+        id: 4,
+        title: 'System Maintenance',
+        message: 'Scheduled maintenance tonight at 11 PM',
+        type: 'info',
+        date: '2024-04-23T14:20:00Z',
+        read: true
+      }
+    ];
+  },
+
+  markAsRead: async (id) => {
+    // Mock mark as read - replace with actual API call
+    return { success: true, id, read: true };
+  },
+
+  markAllAsRead: async () => {
+    // Mock mark all as read - replace with actual API call
+    return { success: true };
+  },
+
+  delete: async (id) => {
+    // Mock delete - replace with actual API call
+    return { success: true };
+  },
+
+  create: async (notificationData) => {
+    // Mock create - replace with actual API call
+    return { id: Date.now(), ...notificationData, read: false };
+  }
+};
+
 // Reviews API
 export const reviewsApi = {
   getAll: async () => {
@@ -334,5 +395,6 @@ export default {
   vendorsApi,
   appointmentsApi,
   partRequestsApi,
-  reviewsApi
+  reviewsApi,
+  notificationsApi
 };
